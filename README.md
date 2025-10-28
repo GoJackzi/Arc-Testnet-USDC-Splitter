@@ -1,41 +1,30 @@
-# Arc USDC Splitter 💰
+# Arc USDC Splitter
 
-Hey there! 👋 This is a super cool web app that automatically splits your USDC payments on Arc Testnet. Just send some USDC to the contract and watch it magically distribute to three recipients - no manual work needed!
+A web application that automatically splits USDC payments on Arc Testnet. Send USDC to the contract and it distributes to three recipients: 50%, 30%, and 20%.
 
-Think of it like having a smart piggy bank that automatically gives 50% to one person, 30% to another, and 20% to a third person. Pretty neat, right?
+## Features
 
-## What makes this awesome? ✨
+- Automatic payment splitting (50% / 30% / 20%)
+- Wallet integration (MetaMask, WalletConnect)
+- Auto-switches to Arc Testnet
+- Real-time balance tracking
+- Transaction preview before sending
+- Mobile responsive
 
-- **🤖 It's automatic**: Set it and forget it - payments split themselves!
-- **📱 Works everywhere**: Desktop, mobile, tablet - you name it
-- **🔗 Wallet friendly**: Works with MetaMask, WalletConnect, and more
-- **🌐 Smart switching**: Automatically switches to Arc Testnet (no confusion!)
-- **👀 See before you send**: Preview exactly how your money will be split
-- **📊 Live updates**: Watch balances and totals update in real-time
-- **🔍 Track everything**: Every transaction is visible on ArcScan
+## Setup
 
-## Let's get you started! 🚀
-
-### What you'll need
-- **Node.js** (version 18 or newer) - [Download here](https://nodejs.org/)
-- **A crypto wallet** - MetaMask works great, but others are fine too
-- **Some testnet USDC** - Don't worry, it's free! Get it from [Circle's faucet](https://faucet.circle.com)
-
-### Getting it running (it's easier than you think!)
-
-1. **Grab the code**
+1. Clone the repository
    ```bash
    git clone https://github.com/GoJackzi/Arc-Testnet-USDC-Splitter.git
    cd Arc-Testnet-USDC-Splitter
    ```
 
-2. **Install the good stuff**
+2. Install dependencies
    ```bash
    npm install
    ```
 
-3. **Create your config file**
-   Make a new file called `.env.local` and add this:
+3. Create `.env.local` file
    ```env
    NEXT_PUBLIC_ARC_RPC_URL=https://rpc.testnet.arc.network
    NEXT_PUBLIC_ARC_CHAIN_ID=5042002
@@ -43,75 +32,46 @@ Think of it like having a smart piggy bank that automatically gives 50% to one p
    NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your_project_id
    ```
 
-4. **Fire it up!**
+4. Start development server
    ```bash
    npm run dev
    ```
 
-5. **Open your browser**
-   Head over to [http://localhost:3000](http://localhost:3000) and you're good to go! 🎉
+5. Open http://localhost:3000
 
-## How to use it (super simple!) 💰
+## Usage
 
-1. **Connect your wallet**
-   - Click that big "Connect Wallet" button
-   - The app will automatically switch you to Arc Testnet (pretty smart, huh?)
+1. Connect your wallet - app automatically switches to Arc Testnet
+2. Get testnet USDC from [Circle Faucet](https://faucet.circle.com)
+3. Enter amount to split
+4. Preview the distribution (50%/30%/20%)
+5. Send payment and confirm in wallet
 
-2. **Get some free testnet USDC**
-   - Go to [Circle's faucet](https://faucet.circle.com)
-   - Pick "Arc Testnet" from the dropdown
-   - Paste your wallet address
-   - Hit request and boom - free testnet money! 💸
+## Contract Details
 
-3. **Split some payments**
-   - Type in how much USDC you want to split (like 10 USDC)
-   - Watch the magic preview show you: 5 USDC, 3 USDC, 2 USDC
-   - Click "Send Payment" and confirm in your wallet
-   - Sit back and watch it automatically split! 🎯
-
-4. **Track your transactions**
-   - See everything happening in real-time
-   - Click any transaction link to see it on ArcScan
-   - Feel like a crypto wizard! 🧙‍♂️
-
-## The technical stuff (for the curious minds) 🏗️
-
-- **Contract Address**: `0x396972457146298cD8109F7B34703F180d586fF9`
+- **Address**: `0x396972457146298cD8109F7B34703F180d586fF9`
 - **Network**: Arc Testnet (Chain ID: 5042002)
-- **Explorer**: [ArcScan](https://testnet.arcscan.app/address/0x396972457146298cD8109F7B34703F180d586fF9) (check it out!)
-- **Split Ratio**: 50% / 30% / 20% (totally customizable if you know Solidity)
-- **Gas Token**: USDC (because why not use stablecoins for everything?)
+- **Explorer**: [ArcScan](https://testnet.arcscan.app/address/0x396972457146298cD8109F7B34703F180d586fF9)
+- **Split**: 50% / 30% / 20%
+- **Gas**: USDC
 
-## What's under the hood? 🛠️
+## Tech Stack
 
-This baby is built with some pretty cool tech:
-- **Next.js 16** - The React framework that makes everything fast
-- **Tailwind CSS** - Makes everything look beautiful without the headache
-- **Wagmi + Viem** - The Web3 magic that talks to your wallet
-- **shadcn/ui** - Pre-built components that look professional
-- **TypeScript** - Because we like our code to actually work 😄
+- Next.js 16
+- Tailwind CSS
+- Wagmi + Viem
+- TypeScript
 
-## Want to contribute? 🤝
+## Contributing
 
-Found a bug? Have an idea? Want to make it even cooler? We'd love your help!
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-1. Fork this repo (click that fork button!)
-2. Create your own branch (`git checkout -b feature/my-awesome-idea`)
-3. Make your changes and commit them (`git commit -m 'Add my awesome idea'`)
-4. Push to your branch (`git push origin feature/my-awesome-idea`)
-5. Open a Pull Request and let's chat about it!
+## License
 
-## The boring legal stuff 📄
-
-This project is open source and free to use under the MIT License. Basically, you can do whatever you want with it - just don't blame us if something goes wrong! 😉
-
-## Shoutouts 🙏
-
-Big thanks to:
-- [Arc Network](https://arc.network) - For building an amazing testnet
-- [Circle](https://circle.com) - For USDC and keeping the faucet flowing
-- [Next.js](https://nextjs.org) - For making React development actually enjoyable
-- [Wagmi](https://wagmi.sh) - For making Web3 integration not a nightmare
+MIT License
 
 ---
 
