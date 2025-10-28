@@ -35,9 +35,13 @@ export const config = createConfig({
   chains: [arcTestnet],
   connectors: [
     injected(),
-    walletConnect({
-      projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || '',
-    }),
+    ...(typeof window !== 'undefined' && process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID
+      ? [
+          walletConnect({
+            projectId: process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID,
+          }),
+        ]
+      : []),
   ],
   transports: {
     [arcTestnet.id]: http(),
